@@ -1,0 +1,261 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    
+}
+body{
+    background-color: black;
+}
+@font-face {
+    font-family: myfont;
+    src: url(text/Sephir-Regular.otf);
+}
+
+.banner{
+    
+    width: 100%;
+    height: 100vh;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+   
+
+}
+.nav{
+    
+    width: 85%;
+    margin: auto;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 4;
+    
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+.nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.nav ul li a{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    color: #fff;
+}
+.nav ul li ::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom:  -10px;
+    transition: 0.8s;
+}
+.nav ul li :hover:after{
+    width: 100%;
+
+}
+.content{
+    position: relative;
+    
+
+}
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 250px; 
+    width: 100%;
+    transition: 3s ease;
+
+    
+}
+  
+.content:hover .overlay{ 
+    top: -300px;
+    
+} 
+
+.gallery{
+    display: flex;
+    justify-content: center;
+
+    gap: 1rem;
+    width: 45rem;
+}
+
+.card{
+    position: relative;
+    left: 0;
+    width: 3rem;
+    border-radius: 5rem;
+
+    height: 25rem;
+    overflow: hidden;
+    transition: .4s ease-in-out;
+
+    box-shadow: 0 5 12px rgba(0, 0, 0, .3);
+    flex: .15;
+}
+
+.card img{
+    position: relative;
+    height: 25rem;
+    object-fit: cover;
+}
+
+.card:hover{
+    flex: 1 1 0;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 1;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+
+.card:hover .text-overlay {
+    opacity: 1;
+}
+
+.text-overlay h2,
+.text-overlay p {
+    margin: 0; 
+}
+
+.text-overlay h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-family: myfont;
+   
+    font-weight: 500;
+}
+
+.text-overlay p {
+    font-size: 0.80rem;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+.menu{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{ 
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    top: 100px;
+    background:linear-gradient( rgba(0,0,0,0), #000 40% );
+    
+
+}
+.text h3{
+    color: #fff;
+    font-family: myfont;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 40px;
+    
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 1rem;
+}
+
+.button:hover {
+    transform: translateY(-5px);
+}
+
+.button a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: myfont;
+}
+
+/* .book-table {
+    background-color: #292929; 
+}
+
+.view-menu {
+    background-color: #292929; 
+} */
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+    transform: translateY(100%);
+    /* display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px; */
+}
+
+.button:hover::before {
+    transform: translateY(0);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
